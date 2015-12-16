@@ -952,7 +952,7 @@ Written by (David *)Frenkiel - https://github.com/imdfl
 			if (node && this._tracker) {
 				this._tracker.acceptChange(node);
 				this._cleanup();
-				this._editor.fire(LITE.Events.ACCEPT, {lite:this});
+				this._editor.fire(LITE.Events.ACCEPT, {lite:this, node:node});
 				this._onSelectionChanged(null);
 			}
 		},
@@ -966,7 +966,7 @@ Written by (David *)Frenkiel - https://github.com/imdfl
 			if (node && this._tracker) {
 				this._tracker.rejectChange(node);
 				this._cleanup();
-				this._editor.fire(LITE.Events.REJECT, {lite:this});
+				this._editor.fire(LITE.Events.REJECT, {lite:this, node:node});
 				this._onSelectionChanged(null);
 			}
 		},
